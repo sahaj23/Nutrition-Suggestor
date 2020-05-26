@@ -1,0 +1,86 @@
+
+<div class="container">
+  
+
+
+<form  #form="ngForm" (ngSubmit)="onSubmit(form)">
+    <label for="inputName">Name</label>
+    <div class="form-label-group">
+      <input
+        type="text"
+        class="form-control input-group-lg"
+        id="inputName"
+        placeholder="Name"
+        required
+        autofocus
+        ngModel
+        name="name"
+      />
+      <!--  -->
+    </div>
+    <label for="inputName">Item Type</label>
+    <div class="form-label-group">
+      <input
+        type="text"
+        class="form-control input-group-lg"
+        id="inputItemType"
+        placeholder="Item Type"
+        required
+        autofocus
+        ngModel
+        name="itemType"
+      />
+      <!--  -->
+    </div>
+    <label for="inputName">Calories</label>
+    <div class="form-label-group">
+      <input
+        type="text"
+        class="form-control input-group-lg"
+        id="inputCalories"
+        placeholder="Calories"
+        autofocus
+        ngModel
+        name="calories"
+      />
+      <!--  -->
+    </div>
+    <label for="inputName">Unit</label>
+    <div class="form-label-group">
+      <input
+        type="text"
+        class="form-control input-group-lg"
+        id="inputUnit"
+        placeholder="Unit"
+        autofocus
+        ngModel
+        name="unit"
+      />
+      <!--  -->
+    </div>
+    <label for="inputName">Price</label>
+    <div class="form-label-group">
+      <input
+        type="text"
+        class="form-control input-group-lg"
+        id="inputPrice"
+        placeholder="Price"
+        required
+        autofocus
+        ngModel
+        name="price"
+      />
+      <!--  -->
+    </div>
+
+    <button
+      class="btn btn-lg btn-primary btn-block"
+      type="submit"
+      id="addUser"
+    >
+      Add item
+    </button>
+  </form>
+
+</div>
+

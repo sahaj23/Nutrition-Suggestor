@@ -1,0 +1,50 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<div class="sidenav" style="background-image: url('assets/image2.jpg');background-attachment: fixed;
+background-size: fitted ;">
+         <div class="login-main-text">
+            <h2>Application<br> Login Page</h2>
+         </div>
+      </div>
+      <div class="main" >
+        <div class="alert alert-danger" *ngIf="error">
+          <p>{{error}}</p>
+        </div>
+         <div class="col-md-6 col-sm-12">
+            <div class="login-form">
+              
+              <form class="form-signin" #form="ngForm" (ngSubmit)="onSubmit(form)">
+                <label for="inputEmail">Username</label>
+                <div class="form-label-group">
+                  <input
+                    type="text"
+                    class="form-control input-group-lg"
+                    id="inputUsername"
+                    placeholder="User Name"
+                    required
+                    autofocus
+                    ngModel
+                    name="username"
+                  />
+                 <br>
+                </div>
+                <label for="inputPassword">Password</label>
+                <div class="form-label-group">
+                  <input
+                    type="password"
+                    id="inputPassword"
+                    class="form-control"
+                    placeholder="Password"
+                    required
+                    ngModel
+                    name="password"
+                  />
+                </div>
+    <br>
+                <button type="submit" class="btn btn-black">Login</button>
+               
+              </form>
+            </div>
+         </div>
+      </div>

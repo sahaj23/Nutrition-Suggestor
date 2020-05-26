@@ -1,0 +1,131 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+
+<section class="jumbotron text-center" style="background-image: url('assets/bg1.jpeg');background-attachment: fixed;background-repeat: no-repeat;
+background-size: 100% 100% ;">
+    <div class="container" style="color:blueviolet; font-family: cursive;">
+        <h1 class="jumbotron-heading" >Find products with your dieteiry specifications</h1>
+     </div>
+</section>
+
+<div class="container">
+    <app-add-product></app-add-product>
+</div>
+
+<div class="container">
+    <div class="row">    
+        <div class="col-xs-8 col-xs-offset-2">
+		    <div class="input-group">
+                <div class="input-group-btn search-panel">
+                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                    	<span id="search_concept">Filter by</span> <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" role="menu">
+                      <li><a href="#contains">Contains</a></li>
+                      <li><a href="#its_equal">It's equal</a></li>
+                      <li><a href="#greather_than">Greather than ></a></li>
+                      <li><a href="#less_than">Less than  </a></li>
+                      <li class="divider"></li>
+                      <li><a href="#all">Anything</a></li>
+                    </ul>
+                </div>
+                <input type="hidden" name="search_param" value="all" id="search_param">         
+                <input type="text" class="form-control" name="x" placeholder="Search term...">
+                <span class="input-group-btn">
+                    <button class="btn btn-default" type="button"><span class="glyphicon glyphicon-search"></span></button>
+                </span>
+            </div>
+        </div>
+	</div>
+</div>
+
+
+
+<div class="container mb-4">
+    <div class="row">
+        <div class="col-12">
+            <div class="table-responsive">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th scope="col">Product Icon</th>
+                            <th scope="col">Product</th>
+                            <th scope="col">Dietery Type</th>
+                            <th scope="col">Calories</th>
+                            <th scope="col">Per Unit</th>
+                            <th scope="col" class="text-right">Price</th>
+                            <th> </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- <tr>
+                            <td><img src="assets/almonds1.jpg"height="50px" width="50px" /> </td>
+                            <td>Almonds</td>
+                            <td>Nuts and seeds</td>
+                            <td>884</td>
+                            <td>100gms</td>
+                            <td class="text-right">2.49$</td>
+                        </tr>
+                        <tr>
+                            <td><img src="assets/oats.jpg" height="50px" width="50px"/> </td>
+                            <td>Oats</td>
+                            <td>Gluten Free</td>
+                            <td>324</td>
+                            <td>100gms</td>
+                            <td class="text-right">9.99$</td>
+                        </tr>
+                        <tr>
+                            <td><img src="assets/eggs.jpg" height="50px" width="50px"/> </td>
+                            <td>Eggs</td>
+                            <td>Poultry</td>
+                            <td>2</td>
+                            <td>1 egg</td>
+                            <td class="text-right">0.59$</td>
+                        </tr>
+                        <tr>
+                            <td><img src="assets/salmon.jpg" height="50px" width="50px"/> </td>
+                            <td>Salmon</td>
+                            <td>Pescatarians</td>
+                            <td>20</td>
+                            <td>100gms</td>
+                            <td class="text-right">3.99$</td>
+                        </tr>
+                        <tr>
+                            <td><img src="assets/milk.jpg"height="50px" width="50px" /> </td>
+                            <td>Milk</td>
+                            <td>Dairy</td>
+                            <td>538Kcal</td>
+                            <td>100ml</td>
+                            <td class="text-right">3.59$</td>
+                        </tr>
+                        <tr>
+                            <td><img src="assets/brown_rice.jpg"height="50px" width="50px" /> </td>
+                            <td>Brown Rice</td>
+                            <td>Vegan</td>
+                            <td>364</td>
+                            <td>100gms</td>
+                            <td class="text-right">1.59$</td>
+                        </tr> -->
+                        <tr *ngFor="let item of items">
+                            <td>_</td>
+                            <td>{{ item.name}}</td>
+                            <td>{{ item.itemType }}</td>
+                            <td>{{item.calories}}</td>
+                            <td>{{item.unit}}</td>
+                            <td>{{item.price}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
